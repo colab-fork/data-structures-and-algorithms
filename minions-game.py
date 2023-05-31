@@ -25,4 +25,36 @@ elif scores['Stuart'] > scores['Kevin']:
     print('Stuart', scores['Stuart'])
 else:
     print('Draw')
+    
+"""
+Above solution crosses time-complexity, here's a faster solution:
+def minion_game(s):
+    vowels = 'AEIOU'
+    players = {'Stuart': 0, 'Kevin': 0}
 
+    for i in range(len(s)):
+        if s[i] in vowels:
+            players['Kevin'] += len(s) - i
+        else:
+            players['Stuart'] += len(s) - i
+
+    if players['Kevin'] > players['Stuart']:
+        result = ('Kevin', players['Kevin'])
+        print(f"{result[0]} {result[1]}")
+
+    elif players['Stuart'] > players['Kevin']:
+        result = ('Stuart', players['Stuart'])
+        print(f"{result[0]} {result[1]}")
+
+    else:
+        result = ('Draw', players['Kevin'])
+        print(f"{result[0]}")
+
+
+
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
+
+"""
