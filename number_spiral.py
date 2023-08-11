@@ -1,28 +1,42 @@
 """
-1 2 3
-4 5 6
-6 9 8
+3
+2 3
+1 1
+4 2
+8
+1
+15
+
 
 """
-# 2d infinite matrix
-#s = [[1, 3, 4, 5], [3, 5, 6, 7], [2, 4, 5, 6], [4, 5, 6, 6]] 
-
+# infinite matrix
+s = [[1, 2, 9, 10, 25], [4, 3, 8, 11, 24], [5, 6, 7, 12, 23], [16, 15, 14, 13, 22], [17, 18, 19, 20, 21]]
 def number_spiral(s):
+    lis = []
     t = int(input())
-    for i in range(t):
-        y, x = list(map(int(input().split()))) # 4 , 5
+    while t > 0:
+        y, x = map(int, input().split())# 2 , 3
         row = y
         col = x
-        for i in range(row+1):
-            for j in range(col+1):
+        for i in range(len(s)):
+            for j in range(len(s[i])):
                 if i == row and j == col:
-                    print(s[i][j])
+                    lis.append(s[row-1][col-1])
+        t -= 1
+    for i in lis:
+        print(i)
 number_spiral(s)
+
+
 
 """
 >>> %Run -c $EDITOR_CONTENT
+3
 2 3
-6  // for each test case
+1 1
+4 2
+8
+1
+15
 >>> 
-
 """
