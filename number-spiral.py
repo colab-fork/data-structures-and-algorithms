@@ -1,15 +1,4 @@
-"""
-3
-2 3
-1 1
-4 2
-8
-1
-15
-
-
-"""
-# infinite matrix
+# first 5 rows and columns of the infinite matrix
 s = [[1, 2, 9, 10, 25], [4, 3, 8, 11, 24], [5, 6, 7, 12, 23], [16, 15, 14, 13, 22], [17, 18, 19, 20, 21]]
 def number_spiral(s):
     lis = []
