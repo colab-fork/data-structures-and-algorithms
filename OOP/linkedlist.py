@@ -4,7 +4,7 @@ class Node:
         self.data = data
         self.next = None
         
-    def  __repr__(self):
+    def  __repr__(self): #used to represent the objects of a class in the form of a string
         return self.data
 
 
